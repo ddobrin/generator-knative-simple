@@ -1,6 +1,6 @@
 ---
 actions:
-  to: kubernetes/service-native.yaml
+  to: kubernetes/native/service.yaml
 ---
 apiVersion: serving.knative.dev/v1
 kind: Service
