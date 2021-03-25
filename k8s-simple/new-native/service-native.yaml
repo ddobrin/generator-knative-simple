@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       annotations:
-        client.knative.dev/user-image: hello-function:native
+        client.knative.dev/user-image: {{artifactId}}-native:{{artifactVersion}}
       name: hello-function-v1
     spec:
       containerConcurrency: 10
@@ -19,7 +19,7 @@ spec:
       - env:
         - name: TARGET
           value: From Native Serverless Test - Spring Function on GraalVM
-        image: {{artifactId}}:native
+        image: {{artifactId}}-native:{{artifactVersion}}
         name: user-container
         readinessProbe:
           successThreshold: 1
